@@ -1,15 +1,32 @@
 <html>
+
 <head>
     <meta charset="UTF-8">
-    <title>程序员情人节礼物大作战</title>
+    <title>平安喜乐。节日快乐。</title>
     <meta name="description" content="程序员情人节礼物大作战 - Valentine's Day">
-    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
     <script src="js/lettuce.js"></script>
     <script src="js/app.js"></script>
 </head>
+
 <body>
-<div id="results">
-    <div class="home"><h1 class="typing">一直期盼你的出现..........</h1></div>
-</div>
+    <audio id="player" controls="controls" autoplay="autoplay" style="display: none;">
+        <source src="./audio/203040.ogg" type="audio/ogg" />
+        <source src="./audio/203040.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+    </audio>
+    <div id="results">
+        <div class="home">
+            <h1 class="typing">一直期盼你的出现..........</h1>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('click', musicPlay);
+        function musicPlay() {
+            document.getElementById('player').play();
+            document.removeEventListener('click', musicPlay);
+        }
+    </script>
 </body>
+
 </html>
